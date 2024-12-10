@@ -1,0 +1,159 @@
+/* Container for the entire form */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
+    padding: 20px;
+  }
+  
+  /* Form styles */
+  .register-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .register-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Labels */
+  .form-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  /* Inputs and Selects */
+  .form-input,
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Button styling */
+  .form-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  .form-button:active {
+    background-color: #1c598a;
+    transform: scale(1);
+  }
+  
+  /* Footer link */
+  .form-footer {
+    margin-top: 10px;
+  }
+  
+  .form-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .form-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Container for the form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: linear-gradient(to right, #8e44ad, #3498db); /* Gradient background */
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  .login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .login-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Labels styling */
+  .form-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  /* Inputs styling */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Button styling */
+  .form-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  .form-button:active {
+    background-color: #1c598a;
+    transform: scale(1);
+  }
+  
+
+  
