@@ -11,12 +11,14 @@ const Home = () => {
       <div className="home-div">
         <h1 className="heading">Shaheen Public School</h1>
         <h2 className="heading2">Welcome</h2>
+        <div className='btn-container'>
         <button className="home-button" onClick={() => navigate('/Login')}>
           Login
         </button>
         <button className="home-button" onClick={() => navigate('/Register')}>
           Register
         </button>
+        </div>
       </div>
     </div>
   );

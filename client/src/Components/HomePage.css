@@ -1,0 +1,85 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 25px; /* Space between links */
+  background: lightblue;
+  padding: 15px 0; /* Vertical padding */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar items */
+.nav-items {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 8px 12px; /* Add spacing inside */
+  transition: color 0.3s ease, transform 0.3s ease;
+  border: none; /* Remove any borders */
+  background: lightblue; /* Remove any default backgrounds */
+  outline: none; /* Remove focus outlines */
+}
+
+/* Hover effects */
+.nav-items:hover {
+  color: #1411e4; /* Change color on hover */
+  transform: scale(1.1); /* Slight scale effect */
+}
+
+/* Active link */
+.nav-items.active {
+  padding-bottom: 5px;
+}
+
+
+/* Dropdown Container */
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu - Updated to 3 Columns */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 10px; /* Spacing between items */
+  z-index: 1000;
+  min-width: 300px; /* Adjust width as needed */
+  padding: 10px;
+}
+
+/* Dropdown Item */
+.dropdown-item {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center; /* Center align text */
+}
+
+.dropdown-item:hover {
+  background-color: #6a11cb;
+}
+
+/* Logout Styling */
+.logout {
+  cursor: pointer;
+  color: black;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logout:hover {
+  color: #1411e4; /* Change color on hover */
+  transform: scale(1.1);
+}
