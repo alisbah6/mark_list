@@ -1,135 +1,241 @@
 /* Ensure the content fits within A4 dimensions */
 @page {
-    size: A4;
-    margin: 20mm; /* Adjust margins to fit content on the page */
-  }
-  /* Style for the Report Card Heading */
+  size: A4;
+  margin: 20mm;
+  /* Adjust margins to fit content on the page */
+}
+
+.page-break {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-break::before {
+  font-size: 12px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 5px;
+}
+
+.page1 {
+  margin: 0px;
+  /* Margin outside the element */
+  position: relative;
+  width: 790px;
+  /* A4 width in pixels */
+  height: 1123px;
+  /* A4 height in pixels */
+  page-break-before: always;
+  justify-content: center;
+  text-align: center;
+}
+
+.page2,
+.page3 {
+  margin: 10px;
+  /* Margin outside the element */
+  border: 5px double green;
+  /* Double green border with 5px thickness */
+  position: relative;
+  width: 765px;
+  /* A4 width in pixels */
+  height: 1123px;
+  /* A4 height in pixels */
+  page-break-before: always;
+}
+
+.report-card {
+  margin: 0 auto;
+  /* Centers the report card horizontally */
+  width: 100%;
+  /* Make sure it spans the full width */
+  max-width: 794px;
+  /* Ensure it doesn't exceed A4 width */
+  box-sizing: border-box;
+  /* Account for padding and borders */
+
+}
+
+/* Style for the Report Card Heading */
 .reportheading {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    padding-top: 20px;
-  }
-  
-  /* Style for the Selected Class Heading */
-  .classselected {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #2d6a4f;  /* A calming color for selected class */
-    margin-bottom: 20px;
-  }
-  
-  /* Style when no class is selected */
-  h2 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: normal;
-    color: #e63946;  /* Red color indicating 'select a class' */
-    margin-top: 10px;
-    font-style: italic;
-  }
-  
-  /* Optionally, you can add padding and margins for better spacing */
-  .reportheading, .classselected, h2 {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    max-width: 90%; /* Ensure it fits nicely in the screen */
-  }  
-  
-  /* Overall page layout */
-  .report-card {
-    border: 1px solid black;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    margin: 0 auto;
-  }
-  
-  /* Center the header */
-  .school-header {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Student details section */
-  .student-details {
-    margin: 0;
-    padding: 10px;
-  }
-  
-  /* Table to contain the student details */
-  .student-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .student-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    vertical-align: middle;
-  }
-  
-  /* Label cells */
-  .label-cell {
-    padding: 10px;
-    text-align: right;
-    font-weight: bold;
-    width: 30%;
-  }
-  
-  /* Input cells */
-  .input-cell {
-    padding: 10px;
-    width: 70%;
-  }
-  
-  /* Label text styling */
-  .student-label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  /* Input fields styling */
-  .student-input {
-    width: 100%; /* Full width to use available space */
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding is included in the width */
-  }
-  
-  /* Specific styling for date input */
-  .student-input[type="date"] {
-    padding: 6px;
-  }
-  * Section for Academic Performance */
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.backheader{
+  position: relative;
+  top: 0%;
+  /* Places it at the top of the page */
+  margin-left: 39.6%;
+  /* Places it at the right side of the page */
+  width: auto;
+  /* You can adjust the width if necessary */
+  height: auto;
+  /* You can adjust the height if necessary */
+}
+.backfooter{
+  position: relative;
+  bottom: 0.2%;
+  /* Places it at the top of the page */
+  right: 19%;
+  /* Places it at the right side of the page */
+  width: auto;
+  /* You can adjust the width if necessary */
+  height: auto;
+  /* You can adjust the height if necessary */
+}
+
+/* Style when no class is selected */
+h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  color: #e63946;
+  /* Red color indicating 'select a class' */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+/* Parent Container */
+.school-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow: hidden;
+  justify-content: center;
+  /* Centers content horizontally */
+  align-items: center;
+  /* Centers content vertically */
+}
+
+
+/* Logo Styling */
+.logo-class {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  margin-left: 8%;
+}
+
+.logo-class img {
+  width: 100px;
+  /* Adjust logo size */
+  height: 80%;
+}
+
+.school-header h2 {
+  font-family: "Georgia", serif;
+  font-size: 45px;
+  color: black;
+  /* Ensure text is visible */
+  margin-top: 2%;
+  margin-left: 23%;
+}
+
+.school-header p {
+  margin-left: 23%;
+  font-size: 17px;
+  color: #333;
+  /* Dark text color for readability */
+}
+
+.reportcard-heading {
+  margin-top: 10%;
+  font-size: 40px;
+}
+
+/* Student details section */
+.student-details {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+/* Table to contain the student details */
+.student-table {
+  width: 80%;
+  border-collapse: collapse; /* Removes extra spacing between table cells */
+  margin-top: 10px;
+}
+
+.student-table td {
+  border: 1px solid #ddd;
+  padding: 5px; /* Reduced padding for compactness */
+}
+
+/* Label cells */
+.label-cell {
+  font-weight: bold;
+  width: 10%;
+  padding: 5px; /* Reduced padding for less space around labels */
+}
+
+/* Input cells */
+.input-cell {
+  width: 70%;
+  padding: 5px; /* Reduced padding for compactness */
+}
+
+/* Label text styling */
+.student-label {
+  display: block;
+  font-size: 14px; /* Optional: Adjust font size for compactness */
+}
+
+/* Input fields styling */
+.student-input {
+  width: 100%;
+  padding: 6px; /* Reduced padding for smaller input height */
+  margin: 0; /* Removes margin around input fields */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  font-size: 14px; /* Optional: Adjust font size for compactness */
+}
+
+/* Specific styling for date input */
+.student-input[type="date"] {
+  padding: 6px;
+  margin: 0; /* Removes margin for consistency */
+}
+
+
+* Section for Academic Performance */ 
 .academic-performance {
   margin-bottom: 40px;
 }
 
-/* Table for academic performance */
 .academic-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  border-top: 5px double green;
+  /* Double border on the top */
+  border-bottom: 5px double green;
+  /* Double border on the bottom */
 }
 
-.academic-table th, .academic-table td {
-  border: 1px solid black;
-  padding: 8px;
+.academic-table th,
+.academic-table td {
+  padding: 10px;
   text-align: center;
+  border: 1px solid #ddd;
+  /* Optional: add border to individual cells */
 }
 
-.academic-table th {
-  background-color: #ddd;
-}
 
 .subject-row {
   background-color: #f2f2f2;
@@ -143,16 +249,36 @@
 .co-curricular-table {
   width: 100%;
   border-collapse: collapse;
+  border-top: 5px double green;
+  /* Double border on the top */
+  border-bottom: 5px double green;
+  /* Double border on the bottom */
+  margin-bottom: 10%;
 }
 
-.co-curricular-table th, .co-curricular-table td {
+.co-curricular-table th,
+.co-curricular-table td {
   border: 1px solid black;
+  /* Single border for individual cells */
   padding: 8px;
   text-align: center;
 }
 
-.co-curricular-table th {
-  background-color: #ddd;
+.co-curricular-performace-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 5px double green;
+  /* Double border on the top */
+  border-bottom: 5px double green;
+  /* Double border on the bottom */
+}
+
+.co-curricular-performace-table th,
+.co-curricular-performance-table td {
+  border: 1px solid black;
+  /* Single border for individual cells */
+  padding: 8px;
+  text-align: center;
 }
 
 /* Table row highlighting for subjects */
@@ -173,167 +299,160 @@
 }
 
 /* Add some margin and padding to section headings */
-h2, h3 {
-  margin-top: 30px;
-  text-align: center;
+.page2 h2{
+    text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: purple;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-/* Style for terms */
-h2 {
-  color: #2d6a4f;
-  font-size: 24px;
-}
-
-h3 {
-  color: #e63946;
-  font-size: 20px;
-}
 /* Container for the remarks section */
 .remarks-section {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* General remarks section */
-  .remarks-term {
-    margin-bottom: 20px;
-  }
-  
-  .remarks-heading {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .remarks-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-  }
-  
-  .remarks-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Attendance Section */
-  .attendance-term {
-    margin-bottom: 20px;
-  }
-  
-  .attendance-heading {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .attendance-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-  }
-  
-  /* Promotion section */
-  .promotion-section {
-    margin-bottom: 20px;
-  }
-  
-  .promotion-heading, .issue-date-heading {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .promotion-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-  }
-  
-  /* Signatories Section */
-  .signatories-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .signatory {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .signatories-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  /* Container for the Grades and Co-Curricular Performance Section */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* General remarks section */
+.remarks-term {
+  margin-bottom: 20px;
+}
+
+.remarks-heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.remarks-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.remarks-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Attendance Section */
+.attendance-term {
+  margin-bottom: 20px;
+}
+
+.attendance-heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.attendance-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Promotion section */
+.promotion-section {
+  margin-bottom: 20px;
+}
+
+.promotion-heading,
+.issue-date-heading {
+  font-size: 18px;
+  color: #333;
+}
+
+.promotion-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Signatories Section */
+.signatories-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signatory {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.signatories-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Container for the Grades and Co-Curricular Performance Section */
 .grades-performance-section {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Heading Styles */
-  .grades-heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .academic-performance-heading,
-  .co-curricular-performance-heading {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 20px;
-  }
-  
-  /* Academic Performance Table */
-  .grades-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  .table-header {
-    background-color: #ddd;
-    padding: 10px;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .table-data {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  /* Co-Curricular Performance Table */
-  .co-curricular-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .co-curricular-table .table-header {
-    background-color: #f4f4f4;
-  }
-  
-  .co-curricular-table .table-data {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  /* Alternate Row Background for Better Readability */
-  .grades-table tr:nth-child(even),
-  .co-curricular-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading Styles */
+.grades-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.academic-performance-heading,
+.co-curricular-performance-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Academic Performance Table */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table-header {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-data {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Co-Curricular Performance Table */
+.co-curricular-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.co-curricular-table .table-header {
+  background-color: #f4f4f4;
+}
+
+.co-curricular-table .table-data {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Alternate Row Background for Better Readability */
+.grades-table tr:nth-child(even),
+.co-curricular-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

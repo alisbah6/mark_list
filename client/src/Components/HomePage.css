@@ -49,10 +49,9 @@
   left: 0;
   border-radius: 4px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 10px; /* Spacing between items */
   z-index: 1000;
-  min-width: 300px; /* Adjust width as needed */
+  min-width: 100px; /* Adjust width as needed */
   padding: 10px;
 }
 

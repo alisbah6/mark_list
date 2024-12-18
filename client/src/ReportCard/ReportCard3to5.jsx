@@ -1,29 +1,28 @@
-import React from 'react'
+import React ,{ useState, useRef, useEffect }from 'react'
 import NavBar from '../Components/NavBar'
-import { useLocation } from 'react-router-dom';
 import './ReportCard.css'
 import Logo from '../Images/logo.png'
+import ReportHeader3 from '../Images/reportcardhead3.png'
+import ReportFooter3 from '../Images/reportcardfooter3.png'
 
 const ReportCard = () => {
     const currentYear = new Date().getFullYear();
     const nextYear = currentYear + 1;
-    const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
   return (
-    <div>
+    <div >
         <NavBar/>
-        <h1 className='reportheading'>Report Card {currentYear} - {nextYear}</h1>
        <div className="report-card">
+        <section className='page1'>
+       <div className='backheader'><img src={ReportHeader3} alt=""/></div>
       <div className="school-header">
-        <img src={Logo} alt="School Logo" />
-        <h2>Shaheen Public School</h2>
+        <img src={Logo} className='logo-class' alt="School Logo" />
+      <h2>Shaheen Public School</h2>
         <p>Recognized by Directorate of Education, Government of Delhi</p>
         <p>Website: www.shaheenpublicschool.in</p>
         <p>Contact No.: 26942364 / 26942367</p>
       </div>
-
+  <h3 className='reportcard-heading'>Report Card ({currentYear}-{nextYear})</h3>
       <div className="student-details">
-  <h3>Report Card ({currentYear}-{nextYear})</h3>
   <table className="student-table">
     <tbody>
       <tr>
@@ -53,11 +52,14 @@ const ReportCard = () => {
     </tbody>
   </table>
 </div>
+<div className='backfooter'><img src={ReportFooter3} alt=""/></div>
+</section>
+<div className="page-break"></div>
 {/* TERM-I Section */}
-<section className="academic-performance">
+<section className='page2'>
         <h2>TERM-I</h2>
-        <h3>ACADEMIC PERFORMANCE</h3>
-
+        <hr/>
+        <h2>ACADEMIC PERFORMANCE</h2>
         <table className="academic-table">
           <thead>
             <tr>
@@ -133,13 +135,10 @@ const ReportCard = () => {
             </tr>
           </tbody>
         </table>
-      </section>
-
       {/* TERM-II Section */}
-      <section className="academic-performance">
         <h2>TERM-II</h2>
-        <h3>ACADEMIC PERFORMANCE</h3>
-
+        <hr/>
+        <h2>ACADEMIC PERFORMANCE</h2>
         <table className="academic-table">
           <thead>
             <tr>
@@ -219,10 +218,7 @@ const ReportCard = () => {
             </tr>
           </tbody>
         </table>
-      </section>
-
       {/* CO-CURRICULAR PERFORMANCE Section */}
-      <section className="co-curricular-performance">
         <h2>CO-CURRICULAR PERFORMANCE</h2>
 
         <table className="co-curricular-table">
@@ -282,6 +278,8 @@ const ReportCard = () => {
           </tbody>
         </table>
       </section>
+      <div className="page-break"></div>
+      <section className='page3'>
       <div className="remarks-section">
       {/* General Remarks for Term I */}
       <div className="remarks-term">
@@ -377,7 +375,7 @@ const ReportCard = () => {
       {/* Co-Curricular Performance Table */}
       <h3 className="co-curricular-performance-heading">Co-Curricular Performance</h3>
 
-      <table className="co-curricular-table">
+      <table className="co-curricular-performace-table">
         <thead>
           <tr>
             <th className="table-header">Grade</th>
@@ -400,6 +398,7 @@ const ReportCard = () => {
         </tbody>
       </table>
     </div>
+    </section>
     </div>
     </div>
   )
