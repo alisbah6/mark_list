@@ -1,62 +1,35 @@
 /* Ensure the content fits within A4 dimensions */
-@page {
+ @page {
   size: A4;
-  margin: 20mm;
-  /* Adjust margins to fit content on the page */
-}
-
-.page-break {
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-  margin: 20px 0;
-  text-align: center;
-  position: relative;
-}
-
-.page-break::before {
-  font-size: 12px;
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  padding: 0 5px;
 }
 
 .page1 {
   margin: 0px;
-  /* Margin outside the element */
   position: relative;
-  width: 790px;
-  /* A4 width in pixels */
+  width: 766px;
   height: 1123px;
-  /* A4 height in pixels */
-  page-break-before: always;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .page2,
 .page3 {
-  margin: 10px;
-  /* Margin outside the element */
+  margin-top: 4%;
   border: 5px double green;
-  /* Double green border with 5px thickness */
   position: relative;
-  width: 765px;
-  /* A4 width in pixels */
-  height: 1123px;
-  /* A4 height in pixels */
-  page-break-before: always;
+  width: 738px;
+  height: 1105px;
+  box-sizing: border-box;
 }
+
 
 .report-card {
   margin: 0 auto;
   /* Centers the report card horizontally */
-  width: 100%;
+  width: 97%;
   /* Make sure it spans the full width */
-  max-width: 794px;
+  max-width: 790px;
   /* Ensure it doesn't exceed A4 width */
   box-sizing: border-box;
   /* Account for padding and borders */
@@ -75,36 +48,17 @@
 
 .backheader{
   position: relative;
-  top: 0%;
-  /* Places it at the top of the page */
-  margin-left: 39.6%;
-  /* Places it at the right side of the page */
+  top: 0.1%;
+  margin-left: 38%;
   width: auto;
-  /* You can adjust the width if necessary */
   height: auto;
-  /* You can adjust the height if necessary */
 }
 .backfooter{
   position: relative;
-  bottom: 0.2%;
-  /* Places it at the top of the page */
-  right: 19%;
-  /* Places it at the right side of the page */
+  right: 20%;
   width: auto;
-  /* You can adjust the width if necessary */
+  /* margin-top:10.2% ; */
   height: auto;
-  /* You can adjust the height if necessary */
-}
-
-/* Style when no class is selected */
-h2 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: normal;
-  color: #e63946;
-  /* Red color indicating 'select a class' */
-  margin-top: 10px;
-  font-style: italic;
 }
 
 
@@ -127,7 +81,7 @@ h2 {
 .logo-class {
   position: absolute;
   top: 10px;
-  left: 20px;
+  left:1%;
   margin-left: 8%;
 }
 
@@ -139,11 +93,11 @@ h2 {
 
 .school-header h2 {
   font-family: "Georgia", serif;
-  font-size: 45px;
+  font-size: 42px;
   color: black;
   /* Ensure text is visible */
   margin-top: 2%;
-  margin-left: 23%;
+  margin-left: 25%;
 }
 
 .school-header p {
@@ -162,58 +116,36 @@ h2 {
 .student-details {
   margin-left: 5%;
   margin-right: 5%;
-
+  height: 29.5%;
 }
 
 /* Table to contain the student details */
 .student-table {
   width: 80%;
+  height: 30%;
   border-collapse: collapse; /* Removes extra spacing between table cells */
   margin-top: 10px;
+  table-layout: fixed; 
 }
 
 .student-table td {
   border: 1px solid #ddd;
-  padding: 5px; /* Reduced padding for compactness */
-}
-
-/* Label cells */
-.label-cell {
-  font-weight: bold;
-  width: 10%;
-  padding: 5px; /* Reduced padding for less space around labels */
-}
-
-/* Input cells */
-.input-cell {
-  width: 70%;
-  padding: 5px; /* Reduced padding for compactness */
+  text-align: center;
+  margin: 0;
 }
 
 /* Label text styling */
-.student-label {
+.student-table label {
   display: block;
   font-size: 14px; /* Optional: Adjust font size for compactness */
 }
-
-/* Input fields styling */
-.student-input {
-  width: 100%;
-  padding: 6px; /* Reduced padding for smaller input height */
-  margin: 0; /* Removes margin around input fields */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
-  font-size: 14px; /* Optional: Adjust font size for compactness */
+.student-table input{
+  width: 100%; /* Ensure input width spans the container */
+  box-sizing: border-box; /* Include padding and border in the width */
+  word-wrap: break-word; /* Allow breaking long words */
+  white-space: normal; /* Wrap text normally */
+  padding: 2%;
 }
-
-/* Specific styling for date input */
-.student-input[type="date"] {
-  padding: 6px;
-  margin: 0; /* Removes margin for consistency */
-}
-
-
 * Section for Academic Performance */ 
 .academic-performance {
   margin-bottom: 40px;
@@ -227,10 +159,21 @@ h2 {
   border-bottom: 5px double green;
   /* Double border on the bottom */
 }
+.academic-table input {
+  width: 90%;
+  height: auto;
+  box-sizing: border-box; /* Ensures padding and border fit within the cell */
+  border: 1px solid white;
+  text-align: center;
+}
+.academic-table input:focus {
+  outline: none;
+  border: 1px solid white; /* Optional: Green border on focus */
+  background-color: #f0f8ff; /* Optional: Light blue background on focus */
+}
 
 .academic-table th,
 .academic-table td {
-  padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
   /* Optional: add border to individual cells */
@@ -239,6 +182,54 @@ h2 {
 
 .subject-row {
   background-color: #f2f2f2;
+}
+.subject-row td:first-child {
+  /* Your styles here */
+  width: 90px;
+}
+
+.column1{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 12%;
+  padding-top:5%;
+  padding-bottom: 5%;
+
+}
+/* Remove border from inputs initially */
+.column1 input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.column1 input:focus {
+  background-color: #f0f8ff;  /* Light background color */
+}
+
+.column2{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6%;
+  padding-bottom: 5%;
+  margin-top: 0;
+
+}
+/* Remove border from inputs initially */
+.overall input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.overall input:focus {
+  background-color: #f0f8ff;  /* Light background color */
+}
+
+.overall{
+  padding-top:5%;
 }
 
 /* Co-curricular performance table */
@@ -250,9 +241,7 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   border-top: 5px double green;
-  /* Double border on the top */
   border-bottom: 5px double green;
-  /* Double border on the bottom */
   margin-bottom: 10%;
 }
 
@@ -260,27 +249,21 @@ h2 {
 .co-curricular-table td {
   border: 1px solid black;
   /* Single border for individual cells */
-  padding: 8px;
   text-align: center;
 }
 
-.co-curricular-performace-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-top: 5px double green;
-  /* Double border on the top */
-  border-bottom: 5px double green;
-  /* Double border on the bottom */
-}
-
-.co-curricular-performace-table th,
-.co-curricular-performance-table td {
-  border: 1px solid black;
-  /* Single border for individual cells */
-  padding: 8px;
+.co-curricular-table input {
+  width: 90%;
+  height: auto;
+  box-sizing: border-box; /* Ensures padding and border fit within the cell */
+  border: 1px solid white;
   text-align: center;
 }
-
+.co-curricular-table input:focus {
+  outline: none;
+  border: 1px solid white; /* Optional: Green border on focus */
+  background-color: #f0f8ff; /* Optional: Light blue background on focus */
+}
 /* Table row highlighting for subjects */
 .subject-row {
   background-color: #f9f9f9;
@@ -307,30 +290,23 @@ h2 {
   font-weight: bold;
 }
 
-/* Container for the remarks section */
-.remarks-section {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
 /* General remarks section */
 .remarks-term {
   margin-bottom: 20px;
-}
 
+}
+.line{
+  border-top: 5px double green;
+}
 .remarks-heading {
-  font-size: 18px;
-  color: #333;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(241, 173, 71);
 }
 
-.remarks-hr {
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 10px 0;
-}
 
 .remarks-textarea {
-  width: 100%;
+  width: 97%;
   height: 100px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -341,8 +317,23 @@ h2 {
 
 /* Attendance Section */
 .attendance-term {
+  border-top: 5px double green;
+  border-bottom: 5px double green;
   margin-bottom: 20px;
 }
+
+/* Remove border from inputs initially */
+.attendance-term input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.attendance-term input:focus {
+  background-color: #f0f8ff;  /* Light background color */
+}
+
 
 .attendance-heading {
   font-size: 18px;
@@ -355,9 +346,20 @@ h2 {
   margin: 10px 0;
 }
 
-/* Promotion section */
 .promotion-section {
+  padding: 10px 0; /* Add padding for spacing inside the section */
   margin-bottom: 20px;
+}
+/* Remove border from inputs initially */
+.promotion-section input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.promotion-section input:focus {
+  background-color: #f0f8ff;  /* Light background color */
 }
 
 .promotion-heading,
@@ -377,14 +379,28 @@ h2 {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Ensure words are vertically aligned */
+  text-align: center; /* Center the text for the center word */
+  border-top: 5px double green;
+  border-bottom: 5px double green;
 }
 
-.signatory {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+/* Align words properly */
+.left-word {
+  flex: 1; /* Push to the left */
+  text-align: left;
 }
+
+.center-word {
+  flex: 1; /* Center in the middle */
+  text-align: center;
+}
+
+.right-word {
+  flex: 1; /* Push to the right */
+  text-align: right;
+}
+
 
 .signatories-hr {
   border: 0;
@@ -392,67 +408,89 @@ h2 {
   margin: 20px 0;
 }
 
-/* Container for the Grades and Co-Curricular Performance Section */
-.grades-performance-section {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+.grades-performance-section{
+  display: flex;
+  height: 16%;
 }
 
-/* Heading Styles */
 .grades-heading {
+  text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+  color: purple;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
+/* Academic and Co-Curricular Performance Headings */
 .academic-performance-heading,
 .co-curricular-performance-heading {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 20px;
-}
-
-/* Academic Performance Table */
-.grades-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.table-header {
-  background-color: #ddd;
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-}
-
-.table-data {
-  padding: 10px;
   text-align: center;
-  border: 1px solid #ddd;
-}
-
-/* Co-Curricular Performance Table */
-.co-curricular-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.co-curricular-table .table-header {
-  background-color: #f4f4f4;
-}
-
-.co-curricular-table .table-data {
-  text-align: center;
-  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
   padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid green;
 }
 
-/* Alternate Row Background for Better Readability */
-.grades-table tr:nth-child(even),
-.co-curricular-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Table styling */
+.grades-table{
+  width: 30%; /* Adjust width to fit the layout */
+  margin: 0 auto 20px; /* Center the tables and add spacing below */
+  border-collapse: collapse; /* Remove gaps between table cells */
 }
+
+.co-curricular-performace-table {
+  width: 50%; /* Adjust width to fit the layout */
+  margin-top:27%;
+  margin-bottom: 2.4%;
+  margin-right: 5%;
+  border-collapse: collapse; /* Remove gaps between table cells */
+}
+
+/* Table Data Cells */
+.grades-table td {
+  font-size: 14px;
+  padding: 4px;
+  border: 1px solid green;
+  text-align: center;
+}
+.co-curricular-performace-table td {
+  font-size: 14px;
+  border: 1px solid green;
+  text-align: center;
+}
+.pdf-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.pdf-button:hover {
+  opacity: 0.8;
+}
+
+.pdf-button.preview {
+  background-color: #4caf50; /* Green for Preview */
+  color: white;
+}
+
+.pdf-button.download {
+  background-color: #2196f3; /* Blue for Download */
+  color: white;
+}
+
+.pdf-button.preview:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.pdf-button.download:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}
+
