@@ -26,6 +26,7 @@ const StudentForm = () => {
   };
 
   return (
+    <div className='student-form-container'>
     <form onSubmit={handleSubmit} className="student-form">
       <h2>Student Form</h2>
       <table className="student-table">
@@ -123,6 +124,7 @@ const StudentForm = () => {
       </table>
       <button type="submit" className="submit-button">Submit</button>
     </form>
+    </div>
   );
 };
 

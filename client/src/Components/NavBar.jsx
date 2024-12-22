@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './HomePage.css';
+import { RecoveryContext } from '../App';
 
 const NavBar = () => {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedClass, setSelectedClass] = useState("");
+      const { isLogin,setLogin } = useContext(RecoveryContext);
+
 
   // Function to handle dropdown visibility
   const toggleDropdown = () => {
@@ -14,7 +17,11 @@ const NavBar = () => {
 
   // Function to handle the selection and redirect
   const handleClassSelection = (className) => {    
-    if (className >= "III" && className <= "V") {
+    if (className==="Nursery" || className === "Kg" ||  className === "I" || className === "II") {
+      setSelectedClass(className);
+      navigate(`/ReportCardNurto2/?class=${className}`);
+    }
+    else if (className=== "III" || className==="IV" || className==="V") {
       setSelectedClass(className);
       navigate(`/ReportCard3to5/?class=${className}`);
     } else {
@@ -22,7 +29,11 @@ const NavBar = () => {
       navigate(`/otherPage`); // Replace this with the desired route for other classes
     }
   };
-  
+  const handlelogin=()=>{
+    setLogin(false)
+    localStorage.setItem('islogin', 'false');
+    navigate('/');
+  }  
 
   return (
     <div className="navbar">
@@ -50,12 +61,16 @@ const NavBar = () => {
       </div>
 
       <NavLink className="nav-items" to="/MarkList">Mark List</NavLink>
-      <div
-        className="nav-items logout"
-        onClick={() => navigate('/')}
-      >
-        Logout
-      </div>
+      {isLogin ? (
+  <button className="nav-items" onClick={handlelogin}>
+    SignOut
+  </button>
+) : (
+  <button className="nav-items" onClick={() => navigate('/Login')}>
+    SignIn
+  </button>
+)}
+
     </div>
   );
 };

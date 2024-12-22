@@ -35,16 +35,6 @@ const Register = () => {
           className="form-input"
           onChange={(e) => setEmail(e.target.value)}
         />
-        
-        <label htmlFor="username" className="form-label">Username</label>
-        <input
-          type="text"
-          placeholder="Enter your username"
-          id="username"
-          className="form-input"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        
         <label htmlFor="password" className="form-label">Password</label>
         <input
           type="password"
@@ -77,7 +67,7 @@ const Register = () => {
         
         <button type="submit" className="form-button">Register</button>
         <div className="form-footer">
-          <Link to="/Login" className="form-link">Already have an account?</Link>
+          <Link to="/" className="form-link">Home</Link>
         </div>
       </form>
     </div>

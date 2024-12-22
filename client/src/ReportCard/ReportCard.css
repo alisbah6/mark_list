@@ -16,9 +16,10 @@
 .page2,
 .page3 {
   margin-top: 4%;
+  margin-left: 0.5%;
   border: 5px double green;
   position: relative;
-  width: 738px;
+  width: 739px;
   height: 1105px;
   box-sizing: border-box;
 }
@@ -60,8 +61,13 @@
   /* margin-top:10.2% ; */
   height: auto;
 }
-
-
+.backfooter1{
+  position: relative;
+  right: 20%;
+  margin-top: 2.3%;
+  width: auto;
+  height: auto;
+}
 /* Parent Container */
 .school-header {
   position: relative;
@@ -186,6 +192,36 @@
 .subject-row td:first-child {
   /* Your styles here */
   width: 90px;
+}
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subject-table th,
+.subject-table td {
+  text-align: left;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 0.9rem;
+}
+.subject-table th {
+  border-bottom: 3px solid #ccc; /* Adds a thicker border below the header */
+}
+.subject-table td:first-child,
+.subject-table th:first-child {
+  border-left: none;
+}
+
+.subject-table td:last-child,
+.subject-table th:last-child {
+  border-right: none;
+}
+.subject-heading{
+  font-weight: bold;
+}
+.subject-part{
+  padding-left: 8px;
 }
 
 .column1{

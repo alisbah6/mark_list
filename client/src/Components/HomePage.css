@@ -1,3 +1,12 @@
+.Back{
+  background-image: url("../Images/frontimg.jpeg");
+  width: 100%;
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-size: cover; /* Makes the image cover the entire area */
+  background-position: center; /* Centers the image */
+  height: 100vh;
+}
+
 /* Navbar container */
 .navbar {
   display: flex;
@@ -82,3 +91,59 @@
   color: #1411e4; /* Change color on hover */
   transform: scale(1.1);
 }
+
+.home-div {
+  margin-top: 13%;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Align text in center */
+  background: transparent;
+}
+
+.heading {
+  font-size: 7rem;
+  color: navy;
+  margin: 7rem ; /* Add spacing */
+  background: white;
+
+}
+.home-button {
+  margin: 0.5rem; /* Add spacing between buttons */
+  padding: 0.7rem 1.5rem; /* Button padding */
+  font-size: 1.5rem;
+  color: white;
+  background-color: #007bff; /* Blue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.home-item {
+  position: absolute; /* Positions the button relative to the nearest positioned ancestor */
+  right: 10px; /* Aligns the button to the right */
+  padding: 10px 20px; /* Adds padding for a comfortable size */
+  background-color: white; /* Green background color */
+  color: green; /* White text color */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the button edges */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  font-size: 16px; /* Increases font size */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Adds hover effects */
+}
+
+.home-item:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increases size */
+}
+
+.home-item:active {
+  background-color: #3e8e41; /* Even darker green on click */
+  transform: scale(0.95); /* Slightly decreases size */
+}
+
+.home-btn{background: transparent;}

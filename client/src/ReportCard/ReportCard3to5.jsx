@@ -1,12 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, } from "react";
 import NavBar from "../Components/NavBar";
 import "./ReportCard.css";
 import Logo from "../Images/logo.png";
 import ReportHeader3 from "../Images/reportcardhead3.png";
 import ReportFooter3 from "../Images/reportcardfooter3.png";
 import html2pdf from "html2pdf.js";
-import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas";
 
 const ReportCard = () => {
   const currentYear = new Date().getFullYear();
