@@ -68,6 +68,20 @@
   width: auto;
   height: auto;
 }
+.backheader3{
+  position: relative;
+  top: 0.1%;
+  margin-left: 41%;
+  width: auto;
+  height: auto;
+}
+.backfooter3{
+  position: relative;
+  right: 20%;
+  width: auto;
+  margin-top:2.5% ;
+  height: auto;
+}
 /* Parent Container */
 .school-header {
   position: relative;
@@ -243,6 +257,25 @@
 .column1 input:focus {
   background-color: #f0f8ff;  /* Light background color */
 }
+.column6to8{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 12%;
+  padding-top:3%;
+  padding-bottom: 3%;
+
+}
+/* Remove border from inputs initially */
+.column6to8 input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.column6to8 input:focus {
+  background-color: #f0f8ff;  /* Light background color */
+}
 
 .column2{
   display: flex;
@@ -353,23 +386,90 @@
 
 /* Attendance Section */
 .attendance-term {
+  display: flex;
+  padding: 10px;
   border-top: 5px double green;
   border-bottom: 5px double green;
-  margin-bottom: 20px;
+
 }
 
-/* Remove border from inputs initially */
-.attendance-term input {
-  border: none;
-  outline: none;  /* Remove the outline on focus */
-  padding: 8px;   /* Add padding for better visual appearance */
+.attendance-term form {
+  display: flex;
+  align-items: center; /* Align label and input vertically */
+  gap: 15px; /* Space between elements */
 }
+
+.attendance-heading {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.attendance-term form input {
+  width: 60px; /* Adjust input size */
+  text-align: center;
+  border: none;
+  padding: 5px;
+}
+
+.attendance-term form span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 
 /* Change background color when input is focused */
 .attendance-term input:focus {
   background-color: #f0f8ff;  /* Light background color */
 }
+.attendance-term-form {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  padding: 20px;
+  background-color: white;
+  max-width: 900px;
+  margin: 5px auto;
+}
 
+.attendance-term-form form {
+  display: flex;
+  justify-content: space-between; /* Align attendance groups horizontally */
+  width: 100%;
+  gap: 20px; /* Space between Term I and Term II */
+}
+.attendance-term-form input:focus {
+  outline: none;
+  border: 1px solid white; /* Optional: Green border on focus */
+  background-color: #f0f8ff; /* Optional: Light blue background on focus */
+}
+.attendance-group {
+  display: flex;
+  align-items: center; /* Vertically align labels and inputs */
+  gap: 10px; /* Space between label and input */
+}
+
+.attendance-heading {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.attendance-input {
+  display: flex;
+  align-items: center; /* Align input and % symbol */
+  gap: 5px; /* Space between input and % */
+}
+
+.attendance-input input {
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.attendance-group span {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 .attendance-heading {
   font-size: 18px;
@@ -386,6 +486,9 @@
   padding: 10px 0; /* Add padding for spacing inside the section */
   margin-bottom: 20px;
 }
+.promotion-section1 {
+  margin-bottom: 20px;
+}
 /* Remove border from inputs initially */
 .promotion-section input {
   border: none;
@@ -395,6 +498,16 @@
 
 /* Change background color when input is focused */
 .promotion-section input:focus {
+  background-color: #f0f8ff;  /* Light background color */
+}
+.promotion-section1 input {
+  border: none;
+  outline: none;  /* Remove the outline on focus */
+  padding: 8px;   /* Add padding for better visual appearance */
+}
+
+/* Change background color when input is focused */
+.promotion-section1 input:focus {
   background-color: #f0f8ff;  /* Light background color */
 }
 

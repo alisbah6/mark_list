@@ -1,12 +1,16 @@
-import React, { useState, } from "react";
+import React, { useState,useContext } from "react";
 import NavBar from "../Components/NavBar";
 import "./ReportCard.css";
 import Logo from "../Images/logo.png";
-import ReportHeader2 from "../Images/reportcardhead2.png";
-import ReportFooter2 from "../Images/reportcardfooter2.png";
+import ReportHeader3 from "../Images/reportcardheader3.png";
+import ReportFooter3 from "../Images/reportcardfooter3.png";
 import html2pdf from "html2pdf.js";
+import { RecoveryContext } from '../App';
 
-const ReportCard3to5 = () => {
+
+const ReportCard6to8 = () => {
+        const { selectedClass } = useContext(RecoveryContext);
+  
   const currentYear = new Date().getFullYear();
   const nextYear = currentYear + 1;
   const [formData, setFormData] = useState({
@@ -18,12 +22,13 @@ const ReportCard3to5 = () => {
     dob: "",
   });
   const [tableData, setTableData] = useState([
-    { subject: "Quran & IS", values: ["", "", "", "", "", ""] },
     { subject: "English", values: ["", "", "", "", "", ""] },
     { subject: "Hindi", values: ["", "", "", "", "", ""] },
     { subject: "Urdu", values: ["", "", "", "", "", ""] },
-    { subject: "Maths", values: ["", "", "", "", "", ""] },
-    { subject: "EVS", values: ["", "", "", "", "", ""] },
+    { subject: "Mathametics", values: ["", "", "", "", "", ""] },
+    { subject: "Science", values: ["", "", "", "", "", ""] },
+    { subject: "Social Science", values: ["", "", "", "", "", ""] },
+    { subject: "IS/Quran", values: ["", "", "", "", "", ""] },
   ]);
   const [formDataPercent, setFormDataPercent] = useState({
     overall: "",
@@ -92,7 +97,7 @@ const ReportCard3to5 = () => {
 
     // Manually control page breaks by adding CSS classes or dynamically adjusting content.
     const options = {
-      filename: `ReportCard_${currentYear}-${nextYear}.pdf`, // PDF filename
+      filename: `ReportCard_${currentYear}-${nextYear}_${selectedClass}.pdf`, // PDF filename
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 4 }, // Increase canvas resolution
       jsPDF: {
@@ -113,8 +118,8 @@ const ReportCard3to5 = () => {
       <NavBar />
       <div className="report-card" id="report-card-content">
         <section className="page1">
-          <div className="backheader">
-            <img src={ReportHeader2} alt="" />
+          <div className="backheader3">
+            <img src={ReportHeader3} alt="" />
           </div>
           <div className="school-header">
             <img src={Logo} className="logo-class" alt="School Logo" />
@@ -240,8 +245,8 @@ const ReportCard3to5 = () => {
               </tbody>
             </table>
           </div>
-          <div className="backfooter">
-            <img src={ReportFooter2} alt="" />
+          <div className="backfooter3">
+            <img src={ReportFooter3} alt="" />
           </div>
         </section>
         <div className="page-break"></div>
@@ -307,7 +312,7 @@ const ReportCard3to5 = () => {
               ))}
             </tbody>
           </table>
-          <div className="column1">
+          <div className="column6to8">
             <form>
               <label>Percentage:</label>
               {isFixed ? (
@@ -698,4 +703,4 @@ const ReportCard3to5 = () => {
   );
 };
 
-export default ReportCard3to5;
+export default ReportCard6to8;

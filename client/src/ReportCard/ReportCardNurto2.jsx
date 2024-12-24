@@ -39,9 +39,20 @@ const ReportCardNurto2 = () => {
         admissionNo: "",
         dob: "",
       });
+      const [formAttendance, setFormAttendance] = useState({
+          attendanceTerm1: '',
+          attendanceTerm2: '',
+        });
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+      };
+      const handleChangeAttendance = (e) => {
+        const { name, value } = e.target;
+        setFormAttendance((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
       };
   return (
     <div>
@@ -518,6 +529,258 @@ const ReportCardNurto2 = () => {
   </tbody>
 </table>
 <hr className='line'/>
+      </section>
+      <section className='page3'>
+        <br/>
+        <hr className='line'/>
+        <table className='subject-table'>
+          <thead>
+            <th>MATHEMATICS</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+            <th>REMARKS</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Term I</td>
+            </tr>
+            <tr>
+              <td>Clarity of Concepts</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Mental Mathematics</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Computational Ability</td>
+              <td></td>
+              <td></td>
+              <td>Term II</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr className='line'/>
+        <br/>
+        <hr className='line'/>
+        <table className='subject-table'>
+          <thead>
+            <th>ISLAMIAT</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+            <th>ENVIRONMENTAL SCIENCE</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Group Discussion</td>
+              <td></td>
+              <td></td>
+              <td>Group Discussion</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Clarity Of Concepts</td>
+              <td></td>
+              <td></td>
+              <td>General Awareness</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Clarity of Concepts</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr className='line'/>
+        <br/>
+        <hr className='line'/>
+        <table className='subject-table'>
+        <thead>
+            <th>ART & CRAFT</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+            <th>PERSONALITY TRAITS</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interest</td>
+              <td></td>
+              <td></td>
+              <td>Confidence</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Aptitude</td>
+              <td></td>
+              <td></td>
+              <td>Regulatity</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Creativity</td>
+              <td></td>
+              <td></td>
+              <td>Punctuality</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Disipline</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Creative</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr className='line'/>
+        <br/>
+        <hr className='line'/>
+        <table className='subject-table'>
+        <thead>
+            <th>SOCIAL SKILLS</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+            <th>PHYSICAL EDUCATION</th>
+            <th>TERM I</th>
+            <th>TERM II</th>
+          </thead>
+          <tbody>
+          <tr>
+              <td>Etiquette</td>
+              <td></td>
+              <td></td>
+              <td>Enthusiam</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Courteous</td>
+              <td></td>
+              <td></td>
+              <td>Co-ordination</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Respect for others</td>
+              <td></td>
+              <td></td>
+              <td>Team Spirit</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr className='line'/>
+         {/* General Remarks for Term II */}
+         <div className="remarks-term">
+              <h4 className="remarks-heading">GENERAL REMARK (Term I)</h4>
+              <hr className="line" />
+              <textarea className="remarks-textarea" cols={243}></textarea>
+            </div>
+            <hr className="line" />
+            <div className="remarks-term">
+              <h4 className="remarks-heading">GENERAL REMARK (Term II)</h4>
+              <hr className="line" />
+              <textarea className="remarks-textarea" cols={243}></textarea>
+            </div>
+            {/* Attendance for Terms */}
+            <hr className='line'/>
+
+            <div className="attendance-term-form">
+  <form>
+    <div className="attendance-group">
+      <label className="attendance-heading">Attendance (Term I):</label>
+      {isFixed ? (
+        <label>{formAttendance.attendanceTerm1 || " "}%</label>
+      ) : (
+        <div className="attendance-input">
+          <input
+            type="number"
+            name="attendanceTerm1"
+            value={formAttendance.attendanceTerm1}
+            onChange={handleChangeAttendance}
+          />
+          <span>%</span>
+        </div>
+      )}
+    </div>
+    <div className="attendance-group">
+      <label className="attendance-heading">Attendance (Term II):</label>
+      {isFixed ? (
+        <label>{formAttendance.attendanceTerm2 || " "}%</label>
+      ) : (
+        <div className="attendance-input">
+          <input
+            type="number"
+            name="attendanceTerm2"
+            value={formAttendance.attendanceTerm2}
+            onChange={handleChangeAttendance}
+          />
+          <span>%</span>
+        </div>
+      )}
+    </div>
+  </form>
+</div>
+<hr className='line'/>
+            {/* Promoted to Class and Issue Date */}
+            <div className="promotion-section1">
+              <form>
+                <label className="promotion-heading">Promoted to Class:</label>
+                <input type="text" />
+                <br />
+                <label className="issue-date-heading">Issue Date:</label>
+                <input type="date" />
+              </form>
+            </div>
+            {/* Signatories Section */}
+            <div class="signatories-section">
+              <span class="left-word">Class Teacher</span>
+              <span class="center-word">Parents</span>
+              <span class="right-word">Principal</span>
+            </div>
       </section>
       </div>
       <button className="pdf-button download" onClick={handleDownload}>
