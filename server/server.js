@@ -1,14 +1,15 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+require('dotenv').config();
 const bodyParser = require('body-parser');
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const connectDB = require("./connect");
-const marksRoutes = require('./routes/marksRoutes'); // Adjust the path
-app.use('/marks',marksRoutes);
+const allRoutes = require('./routes/allroutes');
+app.use('/api',allRoutes);
 
 const PORT = 3200;
 
