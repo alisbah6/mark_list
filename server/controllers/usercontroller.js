@@ -11,10 +11,7 @@ const login = async (req, res) => {
     }
 
     // Find user by email or username
-    const user = await User.findOne({ 
-      $or: [{ email }, { username }] 
-    });
-
+    const user = await User.findOne({ $or: [{ email }, { username }] });
     if (!user) {
       return res.status(400).json({ error: "Invalid email/username or password" });
     }
@@ -68,5 +65,78 @@ const register = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
+const recovery_password = async (req, res) => {
+  try {
+    const { email, username } = req.body;
 
-module.exports = { register,login };
+    // Validate input
+    if (!email && !username) {
+      return res.status(400).json({ error: "Email or Username is required." });
+    }
+
+    // Find the user by email or username
+    const user = await User.findOne({
+      $or: [{ email }, { username }],
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found." });
+    }
+
+    // If user exists, respond with success
+    res.status(200).json({ message: "User exists." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error." });
+  }
+};
+
+const resetPassword = async (req, res) => {
+  try {
+    const { email, username, password, confirmpassword } = req.body;
+
+    // Validation
+    if (!email && !username) {
+      return res.status(400).json({ error: "Email or Username is required." });
+    }
+
+    if (!password || !confirmpassword) {
+      return res.status(400).json({ error: "Both password fields are required." });
+    }
+
+    if (password !== confirmpassword) {
+      return res.status(400).json({ error: "Passwords do not match." });
+    }
+
+    if (password.length < 8) {
+      return res.status(400).json({ error: "Password must be at least 8 characters long." });
+    }
+
+    // Find the user by email or username
+    const user = await User.findOne({ $or: [{ email }, { username }] });
+    if (!user) {
+      return res.status(404).json({ error: "User not found." });
+    }
+
+    // Check if the new password is different from the old one (optional)
+    const isSamePassword = await user.validatePassword(password);
+    if (isSamePassword) {
+      return res.status(400).json({ error: "New password must be different from the old password." });
+    }
+
+    // Update password and mark it as modified
+    user.password = password;
+    user.markModified("password"); // Explicitly mark the password as modified
+    await user.save();
+
+    res.status(200).json({ message: "Password updated successfully." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error." });
+  }
+};
+
+
+
+
+module.exports = { register,login,recovery_password,resetPassword};

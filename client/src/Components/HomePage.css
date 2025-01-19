@@ -45,38 +45,53 @@
 }
 
 
-/* Dropdown Container */
-/* Dropdown Container */
+/* Main dropdown container */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown Menu - Updated to 3 Columns */
+/* Dropdown menu for classes */
 .dropdown-menu {
+  display: none;
   position: absolute;
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px 0;
   top: 100%;
   left: 0;
-  border-radius: 4px;
-  display: grid;
-  gap: 10px; /* Spacing between items */
   z-index: 1000;
-  min-width: 100px; /* Adjust width as needed */
-  padding: 10px;
+  min-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dropdown Item */
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Class items in dropdown */
 .dropdown-item {
-  color: #333;
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center; /* Center align text */
+  position: relative;
+  padding: 8px 15px;
+  color:black;
+  cursor: pointer;
+  background-color: white;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
+/* Hover effect for class items */
 .dropdown-item:hover {
-  background-color: #6a11cb;
+  background-color: white;
+  font-weight: bold;
 }
+
+
+/* Adjust dropdown menu alignment */
+.dropdown-menu {
+  text-align: left;
+}
+
 
 /* Logout Styling */
 .logout {

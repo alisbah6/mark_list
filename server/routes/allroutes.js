@@ -1,10 +1,10 @@
 const express = require("express");
-const { register, login } = require("../controllers/usercontroller");
+const { register, login,recovery_password,resetPassword } = require("../controllers/usercontroller");
 
 const router = express.Router();
 
-// Register route
 router.post("/register", register);
 router.post("/login", login);
-
+router.post("/recovery", recovery_password);
+router.post("/resetpassword", resetPassword);
 module.exports = router;

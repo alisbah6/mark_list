@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import { RecoveryContext } from "../App";
@@ -11,23 +11,13 @@ const NavBar = () => {
     setSelectedClass,
     showReportCardDropdown,
     setShowReportCardDropdown,
-    showMarklistDropdown,
-    setShowMarklistDropdown,
   } = useContext(RecoveryContext);
 
   // Toggle Report Card Dropdown
   const toggleReportCardDropdown = () => {
     setShowReportCardDropdown(!showReportCardDropdown);
-    setShowMarklistDropdown(false); // Close the Marklist dropdown
   };
 
-  // Toggle Marklist Dropdown
-  const toggleMarklistDropdown = () => {
-    setShowMarklistDropdown(!showMarklistDropdown);
-    setShowReportCardDropdown(false); // Close the Report Card dropdown
-  };
-
-  // Handle Class Selection for Report Card
   const handleClassSelection = (className) => {
     setSelectedClass(className);
     if (["Nursery", "Kg", "I", "II"].includes(className)) {
@@ -37,12 +27,6 @@ const NavBar = () => {
     } else {
       navigate(`/ReportCard6to8/?class=${className}`);
     }
-  };
-
-  // Handle Class Selection for Marklist
-  const handleClassMarklist = (classMarlist) => {
-    setSelectedClass(classMarlist);
-    navigate(`/Marklist/?class=${classMarlist}`);
   };
 
   // Handle Login/Logout
@@ -63,6 +47,7 @@ const NavBar = () => {
         <div
           className="nav-items dropdown-toggle"
           onClick={toggleReportCardDropdown}
+          aria-expanded={showReportCardDropdown}
         >
           Report Card
         </div>
@@ -84,40 +69,6 @@ const NavBar = () => {
                 key={className}
                 className="dropdown-item"
                 onClick={() => handleClassSelection(className)}
-              >
-                {className}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Marklist Dropdown */}
-      <div className="dropdown">
-        <div
-          className="nav-items dropdown-toggle"
-          onClick={toggleMarklistDropdown}
-        >
-          Marklist
-        </div>
-        {showMarklistDropdown && (
-          <div className="dropdown-menu">
-            {[
-              "Nursery",
-              "Kg",
-              "I",
-              "II",
-              "III",
-              "IV",
-              "V",
-              "VI",
-              "VII",
-              "VIII",
-            ].map((className) => (
-              <div
-                key={className}
-                className="dropdown-item"
-                onClick={() => handleClassMarklist(className)}
               >
                 {className}
               </div>

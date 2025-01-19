@@ -112,8 +112,8 @@
 }
 
 .school-header h2 {
-  font-family: "Georgia", serif;
-  font-size: 42px;
+  font-family: "monotype corsiva";
+  font-size: 59px;
   color: black;
   /* Ensure text is visible */
   margin-top: 2%;
@@ -121,15 +121,21 @@
 }
 
 .school-header p {
+  font-family: 'Times New Roman', Times, serif;
   margin-left: 23%;
-  font-size: 17px;
+  font-size: 16px;
   color: #333;
   /* Dark text color for readability */
 }
-
+.lower{
+  font-size: 14px;
+}
 .reportcard-heading {
+  font-family: "monotype corsiva";
   margin-top: 10%;
-  font-size: 40px;
+  font-size: 38px;
+  color: green;
+  text-decoration: none;
 }
 
 /* Student details section */
@@ -149,15 +155,16 @@
 }
 
 .student-table td {
-  border: 1px solid #ddd;
-  text-align: center;
+  border: 5px double green;
   margin: 0;
+  
 }
 
 /* Label text styling */
 .student-table label {
   display: block;
-  font-size: 14px; /* Optional: Adjust font size for compactness */
+  text-align: left;
+  font-size: 16px; /* Optional: Adjust font size for compactness */
 }
 .student-table input{
   width: 100%; /* Ensure input width spans the container */
@@ -165,6 +172,7 @@
   word-wrap: break-word; /* Allow breaking long words */
   white-space: normal; /* Wrap text normally */
   padding: 2%;
+  font-size: 16px; /* Optional: Adjust font size for compactness */
 }
 * Section for Academic Performance */ 
 .academic-performance {
@@ -220,13 +228,21 @@
   font-size: 0.9rem;
 }
 .subject-table th {
-  border-bottom: 3px solid #ccc; /* Adds a thicker border below the header */
+  border-bottom: 1px solid #050505;
 }
 .subject-table td:first-child,
 .subject-table th:first-child {
   border-left: none;
 }
-
+.head{
+  color: rgba(8, 26, 107, 0.699);
+  }
+  .term{
+    color: rgb(202, 2, 2);
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+  }
 .subject-table td:last-child,
 .subject-table th:last-child {
   border-right: none;
@@ -354,8 +370,8 @@
 .page2 h2{
     text-align: center;
   font-family: 'Times New Roman', Times, serif;
-  color: purple;
-  font-size: 15px;
+  color: rgb(214, 105, 3);
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -376,7 +392,7 @@
 
 .remarks-textarea {
   width: 97%;
-  height: 100px;
+  height: 110px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -424,7 +440,6 @@
 .attendance-term-form {
   display: flex;
   justify-content: center; /* Center the form horizontally */
-  padding: 20px;
   background-color: white;
   max-width: 900px;
   margin: 5px auto;

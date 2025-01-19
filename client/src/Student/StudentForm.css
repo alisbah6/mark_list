@@ -32,8 +32,8 @@
 /* Table styling */
 .student-table {
   width: 100%;
-  border-collapse: separate;
   border-spacing: 0 15px;
+  border: 2px double ;
 }
 
 .label-cell {

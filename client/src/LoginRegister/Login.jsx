@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { RecoveryContext } from "../App";
 
 const Login = () => {
-  const { setEmail, email, setLogin } = useContext(RecoveryContext);
-  const [username, setUsername] = useState(""); // Added username field
+  const { setEmail, email, setLogin,username,setUsername } = useContext(RecoveryContext);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
