@@ -77,7 +77,7 @@ const ReportCardNurto2 = () => {
             <tbody>
               <tr>
                 <td style={{width:"20%"}}>
-                  <label>Name:</label>
+                  <label>Students Name</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -95,7 +95,7 @@ const ReportCardNurto2 = () => {
               </tr>
               <tr>
                 <td>
-                  <label>Class / Section:</label>
+                  <label>Class / Section</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -113,7 +113,7 @@ const ReportCardNurto2 = () => {
               </tr>
               <tr>
                 <td>
-                  <label>Father's Name:</label>
+                  <label>Father's Name</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -131,7 +131,7 @@ const ReportCardNurto2 = () => {
               </tr>
               <tr>
                 <td>
-                  <label>Mother's Name:</label>
+                  <label>Mother's Name</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -149,7 +149,7 @@ const ReportCardNurto2 = () => {
               </tr>
               <tr>
                 <td>
-                  <label>Admission No.:</label>
+                  <label>Admission No.</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -167,7 +167,7 @@ const ReportCardNurto2 = () => {
               </tr>
               <tr>
                 <td>
-                  <label>Date of Birth:</label>
+                  <label>Date of Birth</label>
                 </td>
                 <td>
                   {isFixed ? (
