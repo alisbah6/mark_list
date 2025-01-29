@@ -29,7 +29,7 @@ const StudentForm = () => {
     <div className='student-form-container'>
     <form onSubmit={handleSubmit} className="student-form">
       <h2>Student Form</h2>
-      <table className="student-table">
+      <table className="students-table">
         <tbody>
           <tr>
             <td className="label-cell">

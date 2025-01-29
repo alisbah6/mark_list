@@ -22,7 +22,7 @@ const ReportCard3to5 = () => {
     { subject: "English", values: ["", "", "", "", "", ""] },
     { subject: "Hindi", values: ["", "", "", "", "", ""] },
     { subject: "Urdu", values: ["", "", "", "", "", ""] },
-    { subject: "Maths", values: ["", "", "", "", "", ""] },
+    { subject: "Mathematics", values: ["", "", "", "", "", ""] },
     { subject: "EVS", values: ["", "", "", "", "", ""] },
   ]);
   const [formDataPercent, setFormDataPercent] = useState({
@@ -130,7 +130,7 @@ const ReportCard3to5 = () => {
             <table className="student-table">
               <tbody>
                 <tr>
-                  <td>
+                  <td style={{width:"20%"}}>
                     <label>Student's Name:</label>
                   </td>
                   <td>
@@ -253,7 +253,7 @@ const ReportCard3to5 = () => {
           <table className="academic-table">
             <thead>
               <tr>
-                <th>SUBJECT</th>
+                <th style={{width:"19%"}}>SUBJECT</th>
                 <th>
                   UT-1
                   <br />
@@ -307,6 +307,8 @@ const ReportCard3to5 = () => {
               ))}
             </tbody>
           </table>
+          <br></br>
+          <br></br>
           <div className="column1">
             <form>
               <label>Percentage:</label>
@@ -333,6 +335,7 @@ const ReportCard3to5 = () => {
               )}
             </form>
           </div>
+          <br></br>
           <hr style={{ border: "2px solid black", margin: "10px 0" }} />
           {/* TERM-II Section */}
           <h2>TERM-II</h2>
@@ -341,7 +344,7 @@ const ReportCard3to5 = () => {
           <table className="academic-table">
             <thead>
               <tr>
-                <th>SUBJECT</th>
+                <th style={{width:"19%"}}>SUBJECT</th>
                 <th>
                   UT-1
                   <br />
@@ -395,6 +398,7 @@ const ReportCard3to5 = () => {
               ))}
             </tbody>
           </table>
+          <br></br>
           <div className="overall">
             <form>
               <label>Percentage:</label>
@@ -409,7 +413,8 @@ const ReportCard3to5 = () => {
                 />
               )}
             </form>
-            <div className="column2">
+            </div>
+            <div className="column1">
               <form>
                 <label>Overall Percentage (Term I + Term II):</label>
                 {isFixed ? (
@@ -435,7 +440,8 @@ const ReportCard3to5 = () => {
                 )}
               </form>
             </div>
-          </div>
+            <br></br>
+            <br></br>
           <hr />
           {/* CO-CURRICULAR PERFORMANCE Section */}
           <h2>CO-CURRICULAR PERFORMANCE</h2>
@@ -498,7 +504,7 @@ const ReportCard3to5 = () => {
               ].map((item, index) => (
                 <tr className="subject-row2" key={index}>
                   <td>
-                    <label>{item.name}:</label>
+                    <label>{item.name}</label>
                   </td>
                   <td>
                     {isFixed ? (

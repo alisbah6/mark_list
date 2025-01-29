@@ -77,7 +77,7 @@ const ReportCardNurto2 = () => {
             <tbody>
               <tr>
                 <td style={{width:"20%"}}>
-                  <label>Students Name</label>
+                  <label>Name</label>
                 </td>
                 <td>
                   {isFixed ? (
@@ -585,10 +585,10 @@ const ReportCardNurto2 = () => {
         <hr className='line'/>
         <table className='subject-table'>
           <thead>
-            <th className='head'>ISLAMIAT</th>
-            <th className='head' style={{textAlign:"center"}}>TERM I</th>
-            <th className='head' style={{textAlign:"center"}}>TERM II</th>
-            <th className='head'>ENVIRONMENTAL SCIENCE</th>
+            <th className='head' style={{textAlign:"center",width: "20%"}}>ISLAMIAT</th>
+            <th className='head' style={{textAlign:"center",width: "12%"}}>TERM I</th>
+            <th className='head' style={{textAlign:"center",width: "12%"}}>TERM II</th>
+            <th className='head' style={{textAlign:"center",width: "25%"}}>ENVIRONMENTAL SCIENCE</th>
             <th className='head' style={{textAlign:"center"}}>TERM I</th>
             <th className='head' style={{textAlign:"center"}}>TERM II</th>
           </thead>
@@ -624,12 +624,12 @@ const ReportCardNurto2 = () => {
         <hr className='line'/>
         <table className='subject-table'>
         <thead>
-            <th className='head'>ART & CRAFT</th>
-            <th className='head' style={{textAlign:"center"}}>TERM I</th>
-            <th className='head' style={{textAlign:"center"}}>TERM II</th>
-            <th className='head'>PERSONALITY TRAITS</th>
-            <th className='head' style={{textAlign:"center"}}>TERM I</th>
-            <th className='head' style={{textAlign:"center"}}>TERM II</th>
+            <th className='head' style={{textAlign:"center",width: "19.5%"}}>ART & CRAFT</th>
+            <th className='head' style={{textAlign:"center",width: "12%"}}>TERM I</th>
+            <th className='head' style={{textAlign:"center",width: "11.5%"}}>TERM II</th>
+            <th className='head' style={{textAlign:"center",width: "24.5%"}}>PERSONALITY TRAITS</th>
+            <th className='head' style={{textAlign:"center",width: "15%"}}>TERM I</th>
+            <th className='head' style={{textAlign:"center",width: "15%"}}>TERM II</th>
           </thead>
           <tbody>
             <tr>
@@ -674,17 +674,15 @@ const ReportCardNurto2 = () => {
             </tr>
           </tbody>
         </table>
-        <hr className='line'/>
-        <br/>
-        <hr className='line'/>
+        <hr style={{ border: "1px ridge black" }} />
         <table className='subject-table'>
         <thead>
-            <th className='head'>SOCIAL SKILLS</th>
-            <th className='head' style={{textAlign:"center"}}>TERM I</th>
-            <th className='head' style={{textAlign:"center"}}>TERM II</th>
-            <th className='head'>PHYSICAL EDUCATION</th>
-            <th className='head' style={{textAlign:"center"}}>TERM I</th>
-            <th className='head' style={{textAlign:"center"}}>TERM II</th>
+            <th className='head' style={{textAlign:"center",width: "20%"}}>SOCIAL SKILLS</th>
+            <th className='head' style={{textAlign:"center",width: "12.2%"}}>TERM I</th>
+            <th className='head' style={{textAlign:"center",width: "12%"}}>TERM II</th>
+            <th className='head' style={{textAlign:"center",width: "25%"}}>PHYSICAL EDUCATION</th>
+            <th className='head' style={{textAlign:"center",width: "15.5%"}}>TERM I</th>
+            <th className='head' style={{textAlign:"center",width: "19%"}}>TERM II</th>
           </thead>
           <tbody>
           <tr>
@@ -713,6 +711,8 @@ const ReportCardNurto2 = () => {
             </tr>
           </tbody>
         </table>
+        <hr className='line'/>
+        <br />
         <hr className='line'/>
          {/* General Remarks for Term II */}
          <div className="remarks-term">
