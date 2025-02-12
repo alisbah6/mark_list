@@ -135,8 +135,8 @@ const ReportCard6to8 = () => {
             <table className="student-table">
               <tbody>
                 <tr>
-                  <td>
-                    <label>Student's Name:</label>
+                  <td  style={{width:"20%"}}>
+                    <label>Student's Name</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -154,7 +154,7 @@ const ReportCard6to8 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <label>Class / Section:</label>
+                    <label>Class / Section</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -172,7 +172,7 @@ const ReportCard6to8 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <label>Father's Name:</label>
+                    <label>Father's Name</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -190,7 +190,7 @@ const ReportCard6to8 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <label>Mother's Name:</label>
+                    <label>Mother's Name</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -208,7 +208,7 @@ const ReportCard6to8 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <label>Admission No.:</label>
+                    <label>Admission No.</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -226,7 +226,7 @@ const ReportCard6to8 = () => {
                 </tr>
                 <tr>
                   <td>
-                    <label>Date of Birth:</label>
+                    <label>Date of Birth</label>
                   </td>
                   <td>
                     {isFixed ? (
@@ -258,7 +258,7 @@ const ReportCard6to8 = () => {
           <table className="academic-table">
             <thead>
               <tr>
-                <th>SUBJECT</th>
+                <th style={{width:"19%"}}>SUBJECT</th>
                 <th>
                   UT-1
                   <br />
@@ -312,7 +312,9 @@ const ReportCard6to8 = () => {
               ))}
             </tbody>
           </table>
-          <div className="column6to8">
+          <br></br>
+          <br></br>
+          <div className="column1">
             <form>
               <label>Percentage:</label>
               {isFixed ? (
@@ -338,6 +340,7 @@ const ReportCard6to8 = () => {
               )}
             </form>
           </div>
+          <br></br>
           <hr style={{ border: "2px solid black", margin: "10px 0" }} />
           {/* TERM-II Section */}
           <h2>TERM-II</h2>
@@ -346,7 +349,7 @@ const ReportCard6to8 = () => {
           <table className="academic-table">
             <thead>
               <tr>
-                <th>SUBJECT</th>
+                <th  style={{width:"19%"}}>SUBJECT</th>
                 <th>
                   UT-1
                   <br />
@@ -400,6 +403,7 @@ const ReportCard6to8 = () => {
               ))}
             </tbody>
           </table>
+          <br></br>
           <div className="overall">
             <form>
               <label>Percentage:</label>
@@ -414,7 +418,8 @@ const ReportCard6to8 = () => {
                 />
               )}
             </form>
-            <div className="column2">
+            </div>
+            <div className="column1">
               <form>
                 <label>Overall Percentage (Term I + Term II):</label>
                 {isFixed ? (
@@ -440,7 +445,8 @@ const ReportCard6to8 = () => {
                 )}
               </form>
             </div>
-          </div>
+            <br></br>
+            <br></br>
           <hr />
           {/* CO-CURRICULAR PERFORMANCE Section */}
           <h2>CO-CURRICULAR PERFORMANCE</h2>

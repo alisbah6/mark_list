@@ -685,4 +685,15 @@ font-size: 16px;
 .pdf-button.download:hover {
   background-color: #1976d2; /* Darker blue on hover */
 }
-
+/*inputs*/
+.subject_input{
+  width: 98%;
+  border: none;
+}
+.subject_input:focus{
+  background-color: #ccc;
+  border: none;
+}
+.remarks:focus{
+  background-color: gainsboro;
+}

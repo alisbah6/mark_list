@@ -203,105 +203,130 @@ const ReportCardNurto2 = () => {
   <tbody>
     <tr>
     <td className='subject-heading'>Reading Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td></td>
+    <td></td>
     <td className='term' style={{textAlign:"center"}}>Term I</td>
     </tr>
     <tr>
     <td className='subject-part'>Pronunciation and Accuracy</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark' rowSpan="8">
+  <textarea 
+      placeholder='type here'
+    className='remarks' 
+    style={{ 
+      width: "100%", 
+      minHeight: "50px", /* Set a minimum height */
+      border: "none", 
+      outline: "none", 
+      padding: "0", 
+      boxSizing: "border-box", 
+      resize: "none", /* Disable manual resizing */
+      overflow: "hidden" /* Hide scrollbar */
+    }}
+    onInput={(e) => {
+      e.target.style.height = "auto"; // Reset height
+      e.target.style.height = `${e.target.scrollHeight}px`; // Set new height
+    }}
+  />
+</td>
     </tr>
     <tr>
     <td className='subject-part'>Fluency</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Expression</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Comprehension</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-heading'>Writing Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    </tr>
+    <td></td>
+    <td></td>
+        </tr>
     <tr>
     <td className='subject-part'>Handwriting</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'> Dictation</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Vocabulary</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-heading'>Speaking Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='term' style={{textAlign:"center"}}>Term II</td>
+    <td></td>
+    <td></td>
+        <td className='term' style={{textAlign:"center"}}>Term II</td>
     </tr>
     <tr>
     <td className='subject-part'> Clarity</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark' rowSpan="8">
+  <textarea 
+      placeholder='type here'
+    className='remarks' 
+    style={{ 
+      width: "100%", 
+      minHeight: "10px", /* Set a minimum height */
+      border: "none", 
+      outline: "none", 
+      padding: "0", 
+      boxSizing: "border-box", 
+      resize: "none", /* Disable manual resizing */
+      overflow: "hidden" /* Hide scrollbar */
+    }}
+    onInput={(e) => {
+      e.target.style.height = "auto"; // Reset height
+      e.target.style.height = `${e.target.scrollHeight}px`; // Set new height
+    }}
+  />
+</td>
     </tr>
     <tr>
     <td className='subject-part'>Vocabulary</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>  Sentence Construction</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Recitation</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-heading'>Listening Skills</td>
-    <td className='subjeact-mark'></td>
-    <td className='subjeact-mark'></td>
-    <td className='subjeact-mark'></td>
-    </tr>
+    <td></td>
+    <td></td>
+        </tr>
     <tr>
     <td className='subject-part'>Oral Comprehension</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Attention</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr></tr>
   </tbody>
@@ -317,62 +342,74 @@ const ReportCardNurto2 = () => {
   <tbody>
     <tr>
     <td className='subject-heading'>Reading Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='term' style={{textAlign:"center"}}>Term I</td>
+    <td></td>
+    <td></td>
+        <td className='term' style={{textAlign:"center"}}>Term I</td>
     </tr>
     <tr>
     <td className='subject-part'>Pronunciation and Accuracy</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark' rowSpan="8">
+    <textarea 
+    placeholder='type here'
+    className='remarks' 
+    style={{ 
+      width: "100%", 
+      minHeight: "10px", /* Set a minimum height */
+      border: "none", 
+      outline: "none", 
+      padding: "0", 
+      boxSizing: "border-box", 
+      resize: "none", /* Disable manual resizing */
+      overflow: "hidden" /* Hide scrollbar */
+    }}
+    onInput={(e) => {
+      e.target.style.height = "auto"; // Reset height
+      e.target.style.height = `${e.target.scrollHeight}px`; // Set new height
+    }}
+  />
+  </td>
     </tr>
     <tr>
     <td className='subject-part'>Fluency</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Expression</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Comprehension</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-heading'>Writing Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td></td>
+    <td></td>
     </tr>
     <tr>
     <td className='subject-part'>Handwriting</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'> Dictation</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-part'>Vocabulary</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
+    <td className='subject-mark'><input type='number' className='subject_input'/></td>
     </tr>
     <tr>
     <td className='subject-heading'>Speaking Skills</td>
-    <td className='subject-mark'></td>
-    <td className='subject-mark'></td>
+    <td></td>
+    <td></td>
     <td className='term' style={{textAlign:"center"}}>Term II</td>
     </tr>
     <tr>
