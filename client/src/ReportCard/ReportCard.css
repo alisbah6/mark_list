@@ -223,8 +223,8 @@
 .subject-table th,
 .subject-table td {
   text-align: left;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 0.5px solid black;
+  border-right: 0.5px solid black;
   font-size: 0.9rem;
 }
 .subject-table th {
@@ -398,10 +398,10 @@
 }
 
 /* General remarks section */
-.remarks-term {
+/* .remarks-term {
   margin-bottom: 20px;
 
-}
+} */
 .line{
   border-top: 5px double green;
 }
@@ -416,7 +416,7 @@
   width: 97%;
   height: 110px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border:none;
   border-radius: 4px;
   font-size: 14px;
   font-family: Arial, sans-serif;
@@ -461,10 +461,9 @@
 }
 .attendance-term-form {
   display: flex;
-  justify-content: center; /* Center the form horizontally */
+  justify-content: space-between; /* Center the form horizontally */
   background-color: white;
   max-width: 900px;
-  margin: 5px auto;
 }
 
 .attendance-term-form form {
@@ -485,7 +484,7 @@
 }
 
 .attendance-heading {
-  font-size: 1rem;
+  font-size: 12PX;
   font-weight: bold;
 }
 
@@ -524,7 +523,7 @@
   margin-bottom: 20px;
 }
 .promotion-section1 {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 /* Remove border from inputs initially */
 .promotion-section input {
@@ -548,10 +547,13 @@
   background-color: #f0f8ff;  /* Light background color */
 }
 
+
 .promotion-heading,
 .issue-date-heading {
   font-size: 18px;
   color: #333;
+  font-weight: bold;
+
 }
 
 .promotion-hr {
@@ -562,13 +564,15 @@
 
 /* Signatories Section */
 .signatories-section {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center; /* Ensure words are vertically aligned */
   text-align: center; /* Center the text for the center word */
   border-top: 5px double green;
-  border-bottom: 5px double green;
+  border-bottom : 5px double green;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 
 /* Align words properly */
@@ -686,14 +690,28 @@ font-size: 16px;
   background-color: #1976d2; /* Darker blue on hover */
 }
 /*inputs*/
-.subject_input{
-  width: 98%;
+.subject_input {
+  width: 100%;
   border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
 }
+
 .subject_input:focus{
   background-color: #ccc;
   border: none;
 }
 .remarks:focus{
   background-color: gainsboro;
+}
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%; /* Ensure it spans the full width */
+  margin-right: 2px;
+  height: 100%; /* Optional: Ensures vertical centering within parent */
+  text-align: center; /* Centers inline text */
 }
